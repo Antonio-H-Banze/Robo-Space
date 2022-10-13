@@ -1,7 +1,9 @@
 # Robo-Space
 This is a Code exercise from Parkside to to create a simple frontend web application to provide the robots with the stage to dance.
 
-## Features
+Overview
+
+Features
 ● Allow the user to start a new competition
 ● Allow the user to create two teams and give them names
 ● Team members are filled in automatically using the following criteria:
