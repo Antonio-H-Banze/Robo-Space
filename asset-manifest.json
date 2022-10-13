@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Robo-Space/static/css/main.c3a74a85.css",
+    "main.js": "/Robo-Space/static/js/main.e4623832.js",
+    "static/media/robotBackground.mp4": "/Robo-Space/static/media/robotBackground.22684df537fd2b70ff78.mp4",
+    "index.html": "/Robo-Space/index.html",
+    "main.c3a74a85.css.map": "/Robo-Space/static/css/main.c3a74a85.css.map",
+    "main.e4623832.js.map": "/Robo-Space/static/js/main.e4623832.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3a74a85.css",
+    "static/js/main.e4623832.js"
+  ]
+}
