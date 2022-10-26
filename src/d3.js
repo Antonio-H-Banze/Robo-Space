@@ -11,7 +11,6 @@
   };
 
   const createLoadingAnimation = () => {
-    const loadingAnimation = $d3.create('div').attr('class', 'lds-facebook');
     loadingAnimation.append('div');
     loadingAnimation.append('div');
     loadingAnimation.append('div');
