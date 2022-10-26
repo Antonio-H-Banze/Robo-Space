@@ -80,3 +80,64 @@
 
   const getMovesDataForWin = async (win, moves) => {     
   };
+  
+ // create data table
+        const table = danceDiv
+          .append('table')
+          .attr('class', 'table')
+          .attr('class', 'competitors-table');
+
+        const filteredMovieData = competitorsData.results.map((d) => {
+          return $teamss.reduce((acc, curr) => {
+            acc[curr] = d[curr];
+            return acc;
+          }, {});
+        });
+
+        console.log('filteredcompetitorsData', filteredcompetitorsData);
+
+        // add table teams
+        table
+          .append('thead')
+          .append('tr')
+          .selectAll('th')
+          .data($teamss)
+          .enter()
+          .append('th')
+          .text(function (d) {
+            return d === 'genre_ids' ? 'moves' : d.replace('_', ' ');
+          })
+          .attr('class', 'competitors-table-head');
+
+        // add table data
+        table
+          .append('tbody')
+          .selectAll('tr')
+          .data(filteredcompetitorsData)
+          .enter()
+          .append('tr')
+          .selectAll('td')
+          .data(function (d) {
+            return Object.keys(d).map((key) => d[key]);
+          })
+          .enter()
+          .append('td')
+          .attr('class', 'competitors-table-body')
+          .text(function (d, index) {
+            return index === $teamss.length - 1
+              ? d.map((i) => $movess.find((g) => g.id === i).name).join(', ')
+              : d;
+          });
+      } catch (error) {
+        console.log('error', error);
+        // display error
+        competitorsDataElement.selectAll('.lds-facebook').remove();
+        competitorsDataDiv
+          .append('h2')
+          .text(`${dance}-${win} - Error Retrieving Data`);
+      }
+    });
+  };
+
+  await getCompetitorsDataForWin( $moves 0].id);
+})(d3, moves, competitors, desiredTeams);
